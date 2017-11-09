@@ -5,9 +5,10 @@ def rot(string):
     before = "abcdefghijklmnopqrstuvwxyz"
     after = before[2:] + before[:2]
     diff = {x: y for x, y in zip(before, after)}
-    print(diff)
 
     return ''.join(map(lambda x: diff.get(x, x), string))
 
 
 print(rot(txt))
+
+print('http://pythonchallenge.com/pc/def/{}.html'.format(rot('map')))
