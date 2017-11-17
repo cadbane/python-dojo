@@ -9,6 +9,9 @@ def ret_none():
 def ret_two():
     return 2
 
+def ret_exception(*args, **kwargs):
+    raise ValueError('Invalid value: {} {}'.format(args, kwargs))
+
 class Assertions(unittest.TestCase):
 
     def test_equal(self):
@@ -90,6 +93,11 @@ class Assertions(unittest.TestCase):
         b = [2,3,5,1,4]
         self.assertCountEqual(a, b)
     
+    def test_raises(self):
+        self.assertRaises(ValueError, ret_exception, 'a', b='c')
+
+    def test_raises_regex(self):
+        self.assertRaisesRegex(ValueError, r'Invalid value', ret_exception, 'a', b='c')
 
 if __name__ == '__main__':
     unittest.main()
