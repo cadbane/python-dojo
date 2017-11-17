@@ -84,6 +84,11 @@ class Assertions(unittest.TestCase):
 
     def test_not_regex(self):
         self.assertNotRegex('one 2 three', r'\d{5}')
+
+    def test_count_equal(self):
+        a = [1,2,3,4,5]
+        b = [2,3,5,1,4]
+        self.assertCountEqual(a, b)
     
 
 if __name__ == '__main__':
