@@ -55,6 +55,36 @@ class Assertions(unittest.TestCase):
         a = 1234
         self.assertNotIsInstance(a, C)
 
+    def test_almost_equal(self):
+        a = 0.9999999999
+        b = 1
+        self.assertAlmostEqual(a, b)
+        self.assertAlmostEqual(a, b, 4)
+
+    def test_not_almost_equal(self):
+        a = 0.09
+        b = 1
+        self.assertNotAlmostEqual(a, b)
+        self.assertNotAlmostEqual(a, b, 2)
+
+    def test_greater(self):
+        self.assertGreater(7, 4)
+
+    def test_greater_equal(self):
+        self.assertGreaterEqual(7, 7)
+
+    def test_less(self):
+        self.assertLess(2, 3)
+
+    def test_less_equal(self):
+        self.assertLessEqual(2, 2)
+
+    def test_regex(self):
+        self.assertRegex('one 2 three', r'\d+')
+
+    def test_not_regex(self):
+        self.assertNotRegex('one 2 three', r'\d{5}')
+    
 
 if __name__ == '__main__':
     unittest.main()
