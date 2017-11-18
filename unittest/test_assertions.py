@@ -99,5 +99,16 @@ class Assertions(unittest.TestCase):
     def test_raises_regex(self):
         self.assertRaisesRegex(ValueError, r'Invalid value', ret_exception, 'a', b='c')
 
+    def test_multi_line_equal(self):
+        a = '''this is
+        multi
+        line
+        string'''
+        b = '''this is
+        multi
+        line
+        string'''
+        self.assertMultiLineEqual(a, b)
+
 if __name__ == '__main__':
     unittest.main()
