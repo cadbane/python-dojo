@@ -6,3 +6,5 @@ print('Python version:', platform.python_version())
 print('Platform machine:', platform.machine())
 # amd64
 
+print('Architecture:', platform.architecture())
+# ('64bit', 'ELF')
