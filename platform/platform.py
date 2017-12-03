@@ -14,3 +14,6 @@ print('Node:', platform.node())
 
 print('Platform:', platform.platform())
 # 'FreeBSD-10.3-STABLE-amd64-64bit-ELF'
+
+print('System:', platform.system())
+# 'FreeBSD'
