@@ -8,3 +8,6 @@ print('Platform machine:', platform.machine())
 
 print('Architecture:', platform.architecture())
 # ('64bit', 'ELF')
+
+print('Node:', platform.node())
+# 'local'
