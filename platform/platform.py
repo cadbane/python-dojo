@@ -17,3 +17,6 @@ print('Platform:', platform.platform())
 
 print('System:', platform.system())
 # 'FreeBSD'
+
+print('Uname:', platform.uname())
+# uname_result(system, node, release, version, machine, processor)
