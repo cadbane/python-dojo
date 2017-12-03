@@ -11,3 +11,6 @@ print('Architecture:', platform.architecture())
 
 print('Node:', platform.node())
 # 'local'
+
+print('Platform:', platform.platform())
+# 'FreeBSD-10.3-STABLE-amd64-64bit-ELF'
